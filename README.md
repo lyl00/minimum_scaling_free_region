@@ -2,13 +2,13 @@
 <p align ="center">
 <img src="docs/minimum_scaling_problem.png" width=75%>
 </p>
-This is an official implementation for formulating and solving the minimum scaling SDP optimizaiton problem proposed in our paper:
-[Collision-Free Trajectory Optimization in Cluttered Environments with Sums-of-Squares Programming](https://arxiv.org/abs/2404.05242).
+
+This is an official implementation for formulating and solving the minimum scaling SDP optimizaiton problem proposed in our paper [Collision-Free Trajectory Optimization in Cluttered Environments with Sums-of-Squares Programming](https://arxiv.org/abs/2404.05242).
 
 Given:
 - the current robot configuration $\boldsymbol{q}$.
 - a polytopic free region $\mathcal{Q}$.
-- the robot geometry $\mathcal{W}_B$ represented as a semialgebraic set (expressed with polynomial equalities and inequalities).
+- the robot geometry $\mathcal{W}_B$ represented as a semialgebraic set (expressed with polynomial equalities and inequalities). 
 
 This repository show how we calculate the minimum scaling factor such that the robot is contained in the scaled free region; and how we extract the gradient of the Lagarangian with respect to robot configuration $\boldsymbol{q}$ at the primal-dual optimum. This information can be further integrated with gradient-based trajectory optimization solvers to provide us a guiding optimization direction for decreasing the value of $\alpha$, and thus, pushing the robot inward the free region to ensure safety. 
 
