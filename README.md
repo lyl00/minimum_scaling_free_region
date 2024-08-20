@@ -3,18 +3,18 @@
 <img src="docs/minimum_scaling_problem.png" width=75%>
 </p>
 
-This is an official implementation for formulating and solving the minimum scaling SDP optimizaiton problem proposed in our paper [Collision-Free Trajectory Optimization in Cluttered Environments with Sums-of-Squares Programming](https://arxiv.org/abs/2404.05242).
+This is an official implementation for formulating and solving the minimum scaling SDP optimization problem proposed in our paper [Collision-Free Trajectory Optimization in Cluttered Environments with Sums-of-Squares Programming](https://arxiv.org/abs/2404.05242).
 
 Given:
 - the current robot configuration $\boldsymbol{q}$.
 - a polytopic free region $\mathcal{Q}$.
 - the robot geometry $\mathcal{W}_B$ represented as a semialgebraic set (expressed with polynomial equalities and inequalities). 
 
-This repository show how we calculate the minimum scaling factor such that the robot is contained in the scaled free region; and how we extract the gradient of the Lagarangian with respect to robot configuration $\boldsymbol{q}$ at the primal-dual optimum. This information can be further integrated with gradient-based trajectory optimization solvers to provide us a guiding optimization direction for decreasing the value of $\alpha$, and thus, pushing the robot inward the free region to ensure safety. 
+This repository shows how we calculate the minimum scaling factor such that the robot is contained in the scaled free region; and how we extract the gradient of the Lagrangian with respect to robot configuration $\boldsymbol{q}$ at the primal-dual optimum. This information can be further integrated with gradient-based trajectory optimization solvers to provide us a guiding optimization direction for decreasing the value of $\alpha$, and thus, pushing the robot inward the free region to ensure safety. 
 
 
 ## Prerequisites
-1. Installing matlab on your local machine, together with the [symbolic toolbox](https://ww2.mathworks.cn/products/symbolic.html).
+1. Installing Matlab on your local machine, together with the [symbolic toolbox](https://ww2.mathworks.cn/products/symbolic.html).
 2. clone the source code:
     ```
         git clone "https://github.com/lyl00/minimum_scaling_free_region.git" 
@@ -34,7 +34,7 @@ This repository show how we calculate the minimum scaling factor such that the r
 
     - download the matlab code library of [modern robotics](https://github.com/NxRLab/ModernRobotics/tree/master/packages/MATLAB) for conducting some operation to SE(3), i.e., the mr folder. 
 
-4. your final folder sturcture should look like the following:
+4. your final folder structure should look like the following:
     ```
     ├── gradient_expression.mat
     ├── README.md
@@ -62,14 +62,14 @@ The [`utils`](utils) folder provides some necessary
 functions for constructing the proposed optimization problem.
 ##  Running the example
 
-[`scaling_sdp_example.mlx`](scaling_sdp_example.mlx) is a fully commented live matlab script illustrating how to construct and solve the optimization problem, extract the primal-dual optimum, and calculate the gradient information.
+[`scaling_sdp_example.mlx`](scaling_sdp_example.mlx) is a fully commented live Matlab script illustrating how to construct and solve the optimization problem, extract the primal-dual optimum, and calculate the gradient information.
 
-You can run it section by section to clearly see each step. We also plot the free region, robot and scaled free region (using the calculated minimum scaling factor) to visualize the results.
+You can run it section by section to clearly see each step. We also plot the free region, the robot, and the scaled free region (using the calculated minimum scaling factor) to visualize the results.
 
 
 ## Authors
 
 - [@Yulin Li](yline@connect.ust.hk)
 
-Feel free to contact me if you have any questions regarding the implementation of the algorithm, we will keep updating this repository to provide implementation s of other parts of our [contributed paper](https://arxiv.org/abs/2404.05242).
+Feel free to contact me if you have any questions regarding the implementation of the algorithm, we will keep updating this repository to provide implementations of other parts of our [contributed paper](https://arxiv.org/abs/2404.05242).
 
