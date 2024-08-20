@@ -1,5 +1,5 @@
 # Minimum Scaling Problem 
-![alt text](visualization.png)
+![alt text](docs/minimum_scaling_problem.png)
 This is an official implementation for formulating and solving the minimum scaling SDP optimizaiton problem proposed in our paper:
 [Collision-Free Trajectory Optimization in Cluttered Environments with Sums-of-Squares Programming](https://arxiv.org/abs/2404.05242).
 
