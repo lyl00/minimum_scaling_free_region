@@ -17,9 +17,10 @@ This repository show how we calculate the minimum scaling factor such that the r
     ```
         git clone "https://github.com/lyl00/minimum_scaling_free_region.git" 
     ```
-3. cd the third_party folder and create a matlab folder to  set up the dependencies:
+3. create and cd the third_party folder and then create a matlab folder to set up the dependencies:
     ```
-    cd ./third_party
+    mkdir third_party
+    cd third_party
     mkdir matlab
     cd matlab
     ```
