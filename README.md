@@ -65,6 +65,19 @@ The [`utils`](utils) folder provides some necessary functions for constructing t
 
 You can run it section by section to clearly see each step. We also plot the free region, the robot, and the scaled free region (using the calculated minimum scaling factor) to visualize the results.
 
+## Citation
+
+```
+@article{li2024collision,
+  title={Collision-Free Trajectory Optimization in Cluttered Environments with Sums-of-Squares Programming},
+  author={Li, Yulin and Zheng, Chunxin and Chen, Kai and Xie, Yusen and Tang, Xindong and Wang, Michael Yu and Ma, Jun},
+  journal={IEEE Robotics and Automation Letters},
+  year={2024},
+  publisher={IEEE}
+}
+```
+
+
 
 ## Authors
 
